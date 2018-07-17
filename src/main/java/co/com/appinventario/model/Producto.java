@@ -13,6 +13,7 @@ public class Producto {
     
     private String codigo;
     private String descri;
+    private double stock,cantidad;
  
     
     
