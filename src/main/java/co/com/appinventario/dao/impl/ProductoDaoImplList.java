@@ -10,10 +10,7 @@ import co.com.appinventario.data.ProductoData;
 import co.com.appinventario.model.Producto;
 import java.util.List;
 
-/**
- *
- * @author giovanny
- */
+
 public class ProductoDaoImplList implements IProductoDao{
 
     @Override
