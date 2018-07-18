@@ -35,17 +35,23 @@ public class ProductoDaoImplList implements IProductoDao{
 
     @Override
     public void crearProducto(Producto producto) {
-
+        List<Producto> listado = ProductoData.getListado(); //traemos la lista
+        listado.add(producto); //adicionamos
+        ProductoData.setListado(listado); //setteamos para que se guarde en la global ya que el add lo agregó local
     }
 
     @Override
     public void eliminarProducto(String codigo) {
-
+        List<Producto> listado = ProductoData.getListado(); //traemos la lista
+        listado.remove(obtenerProducto(codigo)); //removemos, llamamos a obtener y le enviamos el cod
+        ProductoData.setListado(listado);
     }
 
     @Override
     public void actualizarProducto(Producto producto) {
-
+        List<Producto> listado = ProductoData.getListado(); //traemos la lista
+        listado.set(listado.indexOf(producto), producto); //actualizamos, le enviamos el index del producto y la info del mismo
+        ProductoData.setListado(listado);
     }
     
 }
