@@ -5,15 +5,25 @@
  */
 package co.com.appinventario.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 /**
  *
  * @author giovanny
  */
+@Data
+@AllArgsConstructor
+@RequiredArgsConstructor
+@EqualsAndHashCode
 public class Producto {
     
-    private String codigo;
-    private String descri;
-    private double stock,cantidad;
+    @NonNull private String codigo;
+    @EqualsAndHashCode.Exclude private String descri;
+    @EqualsAndHashCode.Exclude private double stock,cantidad;
  
     
     
